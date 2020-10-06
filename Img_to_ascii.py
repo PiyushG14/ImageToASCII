@@ -12,7 +12,9 @@ except:
 img = cv2.imread("test_img.jpg", 0)
 img = cv2.resize(img, (32,32)) 
 width, height = img.shape
+div_factor = 25
+
 for i in range(0, width):
     for j in range(0, height):
-        print(ASCII_CHARS[img[i][j]//25], end = "")
+        print(ASCII_CHARS[img[i][j]//div_factor], end = "")
     print("")
